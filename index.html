@@ -1,40 +1,99 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lavandería A&B | Servicios de Lavandería Industrial y Corporativa en Mejillones</title>
 
-<title>Lavandería A&B | Lavandería Industrial y Particular en Mejillones</title>
+<meta name="description" content="Lavandería A&B en Mejillones. Soluciones de lavandería industrial para minería, contratistas, transporte, hoteles y particulares. Servicio confiable, puntual y profesional.">
+<meta name="keywords" content="lavandería mejillones, lavandería industrial, lavado de uniformes, minería, contratistas, lavandería empresas, lavado corporativo">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-icon{
+width:50px;
+height:50px;
+border-radius:12px;
+background:linear-gradient(
+135deg,
+#0E7AC4,
+#005B96
+);
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:800;
+font-size:1rem;
+color:white;
+box-shadow:0 4px 15px rgba(0,0,0,.25);
+}
+
+.logo-text{
+display:flex;
+flex-direction:column;
+line-height:1.1;
+}
+
+.logo-text span{
+font-size:1.3rem;
+font-weight:700;
+color:white;
+}
+
+.logo-text small{
+font-size:.75rem;
+letter-spacing:1.5px;
+text-transform:uppercase;
+color:#9fc7e8;
+}
+
+:root{
+--primary:#0A2540;
+--secondary:#005B96;
+--accent:#0E7AC4;
+--light:#f5f7fa;
+--white:#ffffff;
+--text:#222;
+--shadow:0 10px 30px rgba(0,0,0,.08);
+}
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f4f6f8;
-color:#222;
+background:var(--light);
+color:var(--text);
+line-height:1.7;
 }
-
-/* NAV */
 
 nav{
 position:fixed;
 top:0;
+left:0;
 width:100%;
-background:rgba(35,35,35,.95);
+padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 8%;
-z-index:999;
+background:rgba(10,37,64,.92);
+backdrop-filter:blur(10px);
+z-index:1000;
 }
 
 .logo{
@@ -45,32 +104,37 @@ font-weight:700;
 
 nav ul{
 display:flex;
-list-style:none;
 gap:25px;
+list-style:none;
 }
 
 nav a{
 color:white;
 text-decoration:none;
 font-weight:500;
+transition:.3s;
 }
 
-/* HERO */
+nav a:hover{
+color:#9fd8ff;
+}
 
 .hero{
-height:100vh;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:120px 20px 80px;
+color:white;
 background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+linear-gradient(
+rgba(10,37,64,.78),
+rgba(10,37,64,.78)
+),
 url('https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=1800&q=80');
-
 background-size:cover;
 background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-padding:20px;
 }
 
 .hero-content{
@@ -79,43 +143,81 @@ max-width:900px;
 
 .hero h1{
 font-size:4rem;
-margin-bottom:20px;
+line-height:1.1;
+margin-bottom:25px;
 }
 
 .hero p{
-font-size:1.3rem;
-margin-bottom:30px;
+font-size:1.15rem;
+max-width:800px;
+margin:auto;
+opacity:.95;
+}
+
+.hero-buttons{
+margin-top:35px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
 }
 
 .btn{
 display:inline-block;
-background:#0099ff;
-color:white;
-padding:15px 35px;
+padding:14px 32px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
 transition:.3s;
 }
 
-.btn:hover{
-background:#0077cc;
+.btn-primary{
+background:var(--accent);
+color:white;
 }
 
-/* GENERAL */
+.btn-primary:hover{
+transform:translateY(-3px);
+}
+
+.btn-outline{
+border:2px solid white;
+color:white;
+}
+
+.btn-outline:hover{
+background:white;
+color:var(--primary);
+}
+
+.trust-bar{
+background:white;
+padding:25px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+text-align:center;
+font-weight:600;
+box-shadow:var(--shadow);
+}
 
 section{
 padding:90px 10%;
 }
 
 .section-title{
+font-size:2.5rem;
 text-align:center;
-font-size:2.6rem;
-margin-bottom:50px;
-color:#1d3557;
+color:var(--primary);
+margin-bottom:20px;
 }
 
-/* NOSOTROS */
+.section-subtitle{
+text-align:center;
+max-width:800px;
+margin:auto auto 50px;
+color:#666;
+}
 
 .about{
 display:grid;
@@ -126,58 +228,55 @@ align-items:center;
 
 .about img{
 width:100%;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
+border-radius:18px;
+box-shadow:var(--shadow);
 }
-
-/* SERVICIOS */
 
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
 
 .card{
 background:white;
 padding:30px;
-border-radius:15px;
-box-shadow:0 5px 25px rgba(0,0,0,.1);
-transition:.3s;
+border-radius:18px;
+box-shadow:var(--shadow);
+border-top:4px solid var(--secondary);
+transition:.35s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
 }
 
 .card h3{
-margin-bottom:15px;
-color:#005792;
+color:var(--primary);
+margin-bottom:10px;
 }
-
-/* EMPRESAS */
 
 .empresa{
-background:#1f2937;
+background:var(--primary);
 color:white;
-text-align:center;
 }
 
-.empresa ul{
-list-style:none;
-margin-top:30px;
+.empresa .section-title{
+color:white;
 }
 
-.empresa li{
-margin:12px 0;
-font-size:1.1rem;
+.empresa .section-subtitle{
+color:#d8e4ef;
 }
 
-/* GALERIA */
+.empresa .card{
+background:white;
+color:#333;
+}
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
 }
 
@@ -185,10 +284,9 @@ gap:20px;
 width:100%;
 height:280px;
 object-fit:cover;
-border-radius:15px;
+border-radius:18px;
+box-shadow:var(--shadow);
 }
-
-/* CONTACTO */
 
 .contact{
 display:grid;
@@ -199,45 +297,52 @@ gap:40px;
 .box{
 background:white;
 padding:30px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,.1);
+border-radius:18px;
+box-shadow:var(--shadow);
 }
 
 .box h3{
-margin-bottom:20px;
-color:#005792;
+margin-bottom:15px;
+color:var(--primary);
 }
 
-/* FOOTER */
+iframe{
+width:100%;
+height:350px;
+border:none;
+border-radius:15px;
+}
 
 footer{
-background:#1f2937;
+background:var(--primary);
 color:white;
 text-align:center;
-padding:30px;
+padding:40px 20px;
 }
 
-/* WHATSAPP */
+footer p{
+opacity:.9;
+margin-top:8px;
+}
 
 .whatsapp{
 position:fixed;
-bottom:20px;
 right:20px;
+bottom:20px;
 background:#25D366;
 color:white;
-padding:15px 22px;
+padding:14px 20px;
 border-radius:50px;
 text-decoration:none;
-font-weight:bold;
-box-shadow:0 5px 15px rgba(0,0,0,.3);
+font-weight:600;
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+z-index:999;
 }
 
-/* MOBILE */
-
-@media(max-width:768px){
+@media(max-width:900px){
 
 .hero h1{
-font-size:2.4rem;
+font-size:2.5rem;
 }
 
 .about,
@@ -245,21 +350,33 @@ font-size:2.4rem;
 grid-template-columns:1fr;
 }
 
+.trust-bar{
+grid-template-columns:1fr 1fr;
+}
+
 nav ul{
 display:none;
+}
+
+section{
+padding:70px 7%;
 }
 
 }
 
 </style>
-</head>
 
+</head>
 <body>
 
 <nav>
-
 <div class="logo">
-Lavandería A&B
+    <div class="logo-icon">A&B</div>
+
+    <div class="logo-text">
+        <span>Lavandería A&B</span>
+        <small>Servicios Industriales</small>
+    </div>
 </div>
 
 <ul>
@@ -268,27 +385,38 @@ Lavandería A&B
 <li><a href="#empresas">Empresas</a></li>
 <li><a href="#contacto">Contacto</a></li>
 </ul>
-
 </nav>
 
 <section class="hero">
-
 <div class="hero-content">
 
-<h1>Lavandería A&B</h1>
+<h1>Soluciones de Lavandería Industrial para Empresas</h1>
 
 <p>
-Especialistas en lavandería industrial y particular en Mejillones.
-Servicio orientado a empresas mineras, contratistas, transporte, hoteles y clientes particulares.
+Especialistas en lavado y gestión de uniformes corporativos,
+ropa industrial y textiles para minería, transporte,
+hotelería, contratistas y clientes particulares en Mejillones.
 </p>
 
-<a href="https://wa.me/56989569701" class="btn">
+<div class="hero-buttons">
+<a href="https://wa.me/56989569701" class="btn btn-primary">
 Solicitar Cotización
 </a>
 
+<a href="#empresas" class="btn btn-outline">
+Ver Servicios
+</a>
 </div>
 
+</div>
 </section>
+
+<div class="trust-bar">
+<div>✓ Atención Empresas</div>
+<div>✓ Entregas Programadas</div>
+<div>✓ Servicio Responsable</div>
+<div>✓ Calidad y Puntualidad</div>
+</div>
 
 <section id="nosotros">
 
@@ -296,24 +424,61 @@ Solicitar Cotización
 
 <div class="about">
 
-<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80">
+<img
+src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80"
+alt="Equipo de trabajo profesional"
+loading="lazy">
 
 <div>
 
-<h3>Compromiso y Calidad</h3>
-
-<br>
+<h3 style="color:#0A2540;margin-bottom:15px;">
+Compromiso con la Calidad Operacional
+</h3>
 
 <p>
-Lavandería A&B nace para entregar soluciones profesionales de lavado y sanitización de prendas en Mejillones.
+En Lavandería A&B entregamos soluciones de lavandería para empresas y particulares, manteniendo altos estándares de limpieza, puntualidad y atención.
 </p>
 
 <br>
 
 <p>
-Atendemos empresas, contratistas y particulares con altos estándares de calidad, puntualidad y atención personalizada.
+Nuestro objetivo es convertirnos en un aliado estratégico para nuestros clientes, garantizando un servicio confiable, seguro y consistente para cada operación.
 </p>
 
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">¿Por Qué Elegirnos?</h2>
+
+<p class="section-subtitle">
+Trabajamos con enfoque en cumplimiento, calidad y confianza.
+</p>
+
+<div class="services">
+
+<div class="card">
+<h3>✓ Cumplimiento</h3>
+<p>Entregas programadas y compromiso con los plazos acordados.</p>
+</div>
+
+<div class="card">
+<h3>✓ Atención Empresas</h3>
+<p>Experiencia en atención a contratistas, transporte y operaciones industriales.</p>
+</div>
+
+<div class="card">
+<h3>✓ Calidad Garantizada</h3>
+<p>Procesos orientados al cuidado, higiene y presentación de cada prenda.</p>
+</div>
+
+<div class="card">
+<h3>✓ Servicio Personalizado</h3>
+<p>Planes adaptados al volumen y necesidades de cada cliente.</p>
 </div>
 
 </div>
@@ -328,32 +493,62 @@ Atendemos empresas, contratistas y particulares con altos estándares de calidad
 
 <div class="card">
 <h3>Uniformes Corporativos</h3>
-<p>Lavado profesional de uniformes empresariales.</p>
+<p>Lavado y mantenimiento de uniformes institucionales.</p>
 </div>
 
 <div class="card">
 <h3>Overoles Industriales</h3>
-<p>Servicio para minería, construcción e industria.</p>
-</div>
-
-<div class="card">
-<h3>Ropa Particular</h3>
-<p>Lavado de ropa diaria, plumones y frazadas.</p>
+<p>Procesos especializados para ropa de trabajo.</p>
 </div>
 
 <div class="card">
 <h3>Hoteles y Hospedajes</h3>
-<p>Toallas, sábanas y ropa blanca.</p>
+<p>Lavado de ropa blanca y textiles hoteleros.</p>
+</div>
+
+<div class="card">
+<h3>Ropa Particular</h3>
+<p>Servicio para prendas personales, frazadas y plumones.</p>
 </div>
 
 <div class="card">
 <h3>Retiro y Entrega</h3>
-<p>Coordinación programada para empresas.</p>
+<p>Coordinación de logística según requerimientos.</p>
 </div>
 
 <div class="card">
 <h3>Convenios Corporativos</h3>
-<p>Planes mensuales para empresas.</p>
+<p>Planes especiales para empresas y organizaciones.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Nuestro Proceso</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>1. Retiro</h3>
+<p>Recepción coordinada de prendas y textiles.</p>
+</div>
+
+<div class="card">
+<h3>2. Clasificación</h3>
+<p>Separación según material y requerimientos.</p>
+</div>
+
+<div class="card">
+<h3>3. Lavado Profesional</h3>
+<p>Procesos adecuados para cada tipo de prenda.</p>
+</div>
+
+<div class="card">
+<h3>4. Entrega</h3>
+<p>Despacho puntual según programación acordada.</p>
 </div>
 
 </div>
@@ -362,36 +557,84 @@ Atendemos empresas, contratistas y particulares con altos estándares de calidad
 
 <section id="empresas" class="empresa">
 
-<h2 class="section-title" style="color:white">
-Soluciones para Empresas
-</h2>
+<h2 class="section-title">Servicios Corporativos</h2>
 
-<p>
-Atendemos requerimientos de:
+<p class="section-subtitle">
+Apoyamos la operación de empresas mediante servicios de lavandería industrial y gestión de uniformes.
 </p>
 
-<ul>
-<li>Minería</li>
-<li>Contratistas Industriales</li>
-<li>Empresas de Transporte</li>
-<li>Hoteles y Hospedajes</li>
-<li>Restaurantes y Casinos</li>
-<li>Servicios Generales</li>
-</ul>
+<div class="services">
+
+<div class="card">
+<h3>Minería</h3>
+<p>Lavado de overoles, ropa técnica y prendas de seguridad.</p>
+</div>
+
+<div class="card">
+<h3>Contratistas</h3>
+<p>Programas de retiro y entrega de uniformes corporativos.</p>
+</div>
+
+<div class="card">
+<h3>Transporte</h3>
+<p>Mantenimiento de uniformes para conductores y operadores.</p>
+</div>
+
+<div class="card">
+<h3>Hoteles</h3>
+<p>Lavado de ropa blanca y textiles hoteleros.</p>
+</div>
+
+<div class="card">
+<h3>Restaurantes</h3>
+<p>Uniformes gastronómicos y textiles de servicio.</p>
+</div>
+
+<div class="card">
+<h3>Instituciones</h3>
+<p>Soluciones adaptadas a necesidades específicas.</p>
+</div>
+
+</div>
 
 </section>
 
 <section>
 
-<h2 class="section-title">Nuestras Instalaciones</h2>
+<h2 class="section-title">Galería</h2>
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=1200&q=80" alt="Lavado industrial" loading="lazy">
 
-<img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=1200&q=80" alt="Proceso de lavandería" loading="lazy">
 
-<img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=1200&q=80" alt="Equipamiento de lavandería" loading="lazy">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Preguntas Frecuentes</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>¿Retiran ropa en empresas?</h3>
+<p>Sí. Coordinamos retiro y entrega programada.</p>
+</div>
+
+<div class="card">
+<h3>¿Atienden particulares?</h3>
+<p>Sí. Trabajamos con empresas y clientes particulares.</p>
+</div>
+
+<div class="card">
+<h3>¿Realizan convenios?</h3>
+<p>Sí. Disponemos de planes y acuerdos para empresas.</p>
+</div>
 
 </div>
 
@@ -399,34 +642,24 @@ Atendemos requerimientos de:
 
 <section id="contacto">
 
-<h2 class="section-title">Contacto</h2>
+<h2 class="section-title">Ubicación y Contacto</h2>
 
 <div class="contact">
 
 <div class="box">
 
-<h3>Información</h3>
+<h3>Lavandería A&B</h3>
 
-<p><strong>Lavandería A&B</strong></p>
-<p>📍 Andalican 946, Mejillones</p>
-<p>📞 +56 9 8956 9701</p>
-<p>💬 WhatsApp disponible</p>
+<p><strong>Dirección:</strong> Av. Andalicán 946, Mejillones</p>
+<p><strong>WhatsApp:</strong> +56 9 8956 9701</p>
+<p><strong>Horario:</strong> Lunes a Viernes 08:00 - 18:00</p>
+<p><strong>Sábado:</strong> 09:00 - 14:00</p>
 
 </div>
 
 <div class="box">
 
-<h3>Cotizaciones</h3>
-
-<p>
-Solicite una evaluación para servicios empresariales o particulares.
-</p>
-
-<br>
-
-<a href="https://wa.me/56989569701" class="btn">
-Contactar por WhatsApp
-</a>
+<iframe src="https://maps.google.com/maps?q=Av.%20Andalican%20946%20Mejillones&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
 
 </div>
 
@@ -438,9 +671,9 @@ Contactar por WhatsApp
 
 <h3>Lavandería A&B</h3>
 
-<p>
-Lavandería Industrial y Particular en Mejillones
-</p>
+<p>Servicios de lavandería industrial y corporativa en Mejillones.</p>
+
+<p>Compromiso, calidad y puntualidad para empresas y particulares.</p>
 
 </footer>
 
