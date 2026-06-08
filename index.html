@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lavandería A&B | Lavandería Industrial y Particular en Mejillones</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f6f8;
+color:#222;
+}
+
+/* NAV */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(35,35,35,.95);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+z-index:999;
+}
+
+.logo{
+color:white;
+font-size:1.6rem;
+font-weight:700;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=1800&q=80');
+
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.3rem;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+background:#0099ff;
+color:white;
+padding:15px 35px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#0077cc;
+}
+
+/* GENERAL */
+
+section{
+padding:90px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.6rem;
+margin-bottom:50px;
+color:#1d3557;
+}
+
+/* NOSOTROS */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+/* SERVICIOS */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 25px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#005792;
+}
+
+/* EMPRESAS */
+
+.empresa{
+background:#1f2937;
+color:white;
+text-align:center;
+}
+
+.empresa ul{
+list-style:none;
+margin-top:30px;
+}
+
+.empresa li{
+margin:12px 0;
+font-size:1.1rem;
+}
+
+/* GALERIA */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:15px;
+}
+
+/* CONTACTO */
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.box{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.box h3{
+margin-bottom:20px;
+color:#005792;
+}
+
+/* FOOTER */
+
+footer{
+background:#1f2937;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 22px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.4rem;
+}
+
+.about,
+.contact{
+grid-template-columns:1fr;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+Lavandería A&B
+</div>
+
+<ul>
+<li><a href="#nosotros">Nosotros</a></li>
+<li><a href="#servicios">Servicios</a></li>
+<li><a href="#empresas">Empresas</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Lavandería A&B</h1>
+
+<p>
+Especialistas en lavandería industrial y particular en Mejillones.
+Servicio orientado a empresas mineras, contratistas, transporte, hoteles y clientes particulares.
+</p>
+
+<a href="https://wa.me/56989569701" class="btn">
+Solicitar Cotización
+</a>
+
+</div>
+
+</section>
+
+<section id="nosotros">
+
+<h2 class="section-title">Quiénes Somos</h2>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80">
+
+<div>
+
+<h3>Compromiso y Calidad</h3>
+
+<br>
+
+<p>
+Lavandería A&B nace para entregar soluciones profesionales de lavado y sanitización de prendas en Mejillones.
+</p>
+
+<br>
+
+<p>
+Atendemos empresas, contratistas y particulares con altos estándares de calidad, puntualidad y atención personalizada.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="servicios">
+
+<h2 class="section-title">Servicios</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Uniformes Corporativos</h3>
+<p>Lavado profesional de uniformes empresariales.</p>
+</div>
+
+<div class="card">
+<h3>Overoles Industriales</h3>
+<p>Servicio para minería, construcción e industria.</p>
+</div>
+
+<div class="card">
+<h3>Ropa Particular</h3>
+<p>Lavado de ropa diaria, plumones y frazadas.</p>
+</div>
+
+<div class="card">
+<h3>Hoteles y Hospedajes</h3>
+<p>Toallas, sábanas y ropa blanca.</p>
+</div>
+
+<div class="card">
+<h3>Retiro y Entrega</h3>
+<p>Coordinación programada para empresas.</p>
+</div>
+
+<div class="card">
+<h3>Convenios Corporativos</h3>
+<p>Planes mensuales para empresas.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="empresas" class="empresa">
+
+<h2 class="section-title" style="color:white">
+Soluciones para Empresas
+</h2>
+
+<p>
+Atendemos requerimientos de:
+</p>
+
+<ul>
+<li>Minería</li>
+<li>Contratistas Industriales</li>
+<li>Empresas de Transporte</li>
+<li>Hoteles y Hospedajes</li>
+<li>Restaurantes y Casinos</li>
+<li>Servicios Generales</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Nuestras Instalaciones</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=1200&q=80">
+
+<img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=1200&q=80">
+
+<img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=1200&q=80">
+
+</div>
+
+</section>
+
+<section id="contacto">
+
+<h2 class="section-title">Contacto</h2>
+
+<div class="contact">
+
+<div class="box">
+
+<h3>Información</h3>
+
+<p><strong>Lavandería A&B</strong></p>
+<p>📍 Andalican 946, Mejillones</p>
+<p>📞 +56 9 8956 9701</p>
+<p>💬 WhatsApp disponible</p>
+
+</div>
+
+<div class="box">
+
+<h3>Cotizaciones</h3>
+
+<p>
+Solicite una evaluación para servicios empresariales o particulares.
+</p>
+
+<br>
+
+<a href="https://wa.me/56989569701" class="btn">
+Contactar por WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Lavandería A&B</h3>
+
+<p>
+Lavandería Industrial y Particular en Mejillones
+</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/56989569701">
+WhatsApp
+</a>
+
+</body>
+</html>
